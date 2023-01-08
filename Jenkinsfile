@@ -17,7 +17,13 @@ pipeline {
                  
             }
         }
-  
+  stage('Check-log') {
+            steps {
+                  sh "chmod +x -R ${env.WORKSPACE}"
+                 sh './check-log.sh'
+                 
+            }
+        }
         
     }
 }
