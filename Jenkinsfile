@@ -16,7 +16,12 @@ pipeline {
                  
             }
         }
-       
+       stage('get request') {
+            steps {
+                 sh 'curl http://localhost:8065'
+                 
+            }
+        }
         
     }
 }
