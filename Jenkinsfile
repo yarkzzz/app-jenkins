@@ -12,16 +12,12 @@ pipeline {
         }
        stage('Run') {
             steps {
-                 sh 'npm start'
+                  sh "chmod +x -R ${env.WORKSPACE}"
+                 sh './run.sh'
                  
             }
         }
-       stage('get request') {
-            steps {
-                 sh 'curl http://localhost:8065'
-                 
-            }
-        }
+  
         
     }
 }
