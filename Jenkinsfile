@@ -10,6 +10,12 @@ pipeline {
                 sh 'npm install'
             }
         }
+       stage('Run') {
+            steps {
+                 sh "chmod +x -R ${env.WORKSPACE}"
+                 sh './run.sh'
+            }
+        }
        
         
     }
