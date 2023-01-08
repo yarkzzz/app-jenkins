@@ -12,8 +12,8 @@ pipeline {
         }
        stage('Run') {
             steps {
-                 sh "chmod +x -R ${env.WORKSPACE}"
-                 sh './run.sh'
+                 sh ''npm start'
+                 
             }
         }
        
