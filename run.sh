@@ -1,10 +1,6 @@
 #!/usr/bin/env sh
 
 set -x
-npm run build
-set +x
-
-set -x
 npm start & curl http://localhost:8065 &
 sleep 1
 echo $! > .pidfile
